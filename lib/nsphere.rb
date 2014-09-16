@@ -147,9 +147,6 @@ class NSphere
   def /(a)
     tmp = add_angles(@thetas, a.thetas.map { |x| -x})
 
-    p @thetas
-    p a.thetas.map { |x| -x}
-    p tmp
     NSphere.new(radius: @radius / a.radius,
                 thetas: tmp)
   end
