@@ -17,8 +17,21 @@ for detailed explanation.
   => false
   irb(main):002:0> require 'nsphere'
   => true
-  irb(main):003:0> NSphere.new(coord: [3.0, 4.0])
-  => #<NSphere:0x000000019c4f68 @coordinates=[3.0, 4.0], @radius=5.0, @thetas=[0.9272952180016122]>
+  irb(main):003:0> puts NSphere.new(coord: [3.0, 4.0])
+  radius: 5.0, thetas: [0.9272952180016122], coordinates: [3.0, 4.0]
+  => nil
+  irb(main):004:0> a = NSphere.new(coord: [3.0, 4.0])
+  => #<NSphere:0x00000001c2f8c0 @coordinates=[3.0, 4.0], @dim=2, @radius=5.0, @thetas=[0.9272952180016122]>
+  irb(main):005:0> b = NSphere.new(coord: [4.0, 3.0])
+  => #<NSphere:0x00000001c15510 @coordinates=[4.0, 3.0], @dim=2, @radius=5.0, @thetas=[0.6435011087932844]>
+  irb(main):006:0> a + b
+  => #<NSphere:0x00000001c0d6d0 @coordinates=[7.0, 7.0], @dim=2, @radius=9.899494936611665, @thetas=[0.7853981633974483]>
+
+== Git-version source code
+
+  git clone https://github.com/m00nlight/nsphere.git && cd nsphere
+  ruby test/tc_nsphere.rb
+  
 
 
 ==Copyright
